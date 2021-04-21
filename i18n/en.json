@@ -4,5 +4,6 @@
 			"Your Name"
 		]
 	},
+	"buildsandbox-title": "Front-end build sandbox",
 	"buildsandbox-desc": "This is an example extension"
 }

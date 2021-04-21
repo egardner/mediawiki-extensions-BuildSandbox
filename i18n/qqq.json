@@ -4,5 +4,6 @@
 			"Your Name"
 		]
 	},
+	"buildsandbox-title": "Title of the sandbox special page",
 	"buildsandbox-desc": "{{desc|name=Boilerplate|url=https://www.mediawiki.org/wiki/Extension:Boilerplate}}"
 }

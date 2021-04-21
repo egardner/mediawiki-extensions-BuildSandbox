@@ -6,18 +6,13 @@
 	var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
 	function helloFromA() {
-		return 'A';
+	  return 'A';
 	}
 
 	function helloFromB() {
-		return 'B';
+	  return 'B';
 	}
 
-	// eslint-disable-next-line no-jquery/no-global-selector
-	$__default['default']( '#sandbox' ).html( `
-	<p>
-		This page contains data from ${helloFromA()} and ${helloFromB()};
-	</p>
-` );
+	$__default['default']('#sandbox').html("\n\t<p>\n\t\tThis page contains data from ".concat(helloFromA(), " and ").concat(helloFromB(), ";\n\t</p>\n"));
 
 }($));

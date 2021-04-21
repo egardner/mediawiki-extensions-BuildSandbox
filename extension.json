@@ -49,8 +49,7 @@
 			"styles": [],
 			"scripts": [
 				"dist/ext.buildSandbox.main.js"
-			],
-			"es6": true
+			]
 		}
 	},
 	"SpecialPages": {

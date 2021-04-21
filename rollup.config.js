@@ -1,3 +1,5 @@
+import { babel } from '@rollup/plugin-babel';
+
 export default {
 	input: {
 		// Do this for each module you want to output;
@@ -31,5 +33,13 @@ export default {
 
 		// enable minification
 		compact: false
-	}
+	},
+
+	// Configure any necessary plugins
+	// Rollup has an official babel plugin that is used here for JS
+	// transpilation:
+	// https://github.com/rollup/plugins/tree/master/packages/babel
+	plugins: [
+		babel( { babelHelpers: 'bundled' } )
+	]
 };

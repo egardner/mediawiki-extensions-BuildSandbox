@@ -1,4 +1,5 @@
 import { babel } from '@rollup/plugin-babel';
+import cleanup from 'rollup-plugin-cleanup';
 
 export default {
 	input: {
@@ -41,6 +42,7 @@ export default {
 	// transpilation:
 	// https://github.com/rollup/plugins/tree/master/packages/babel
 	plugins: [
-		babel( { babelHelpers: 'bundled' } )
+		babel( { babelHelpers: 'bundled' } ),
+		cleanup()
 	]
 };

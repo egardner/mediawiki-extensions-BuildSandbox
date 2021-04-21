@@ -17,6 +17,7 @@
 		"husky": "^6.0.0",
 		"jquery": "^3.6.0",
 		"rollup": "^2.45.2",
+		"rollup-plugin-cleanup": "^3.2.1",
 		"stylelint-config-wikimedia": "0.10.3",
 		"vue": "^2.6.12"
 	},

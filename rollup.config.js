@@ -30,6 +30,6 @@ export default {
 		},
 
 		// enable minification
-		compact: true
+		compact: false
 	}
 };

@@ -13,7 +13,8 @@ export default {
 	// provided by mw core, etc.
 	// see: https://rollupjs.org/guide/en/#external
 	external: [
-		'jquery'
+		'jquery',
+		'vue'
 	],
 
 	output: {

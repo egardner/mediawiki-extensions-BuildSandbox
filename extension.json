@@ -42,7 +42,9 @@
 	},
 	"ResourceModules": {
 		"ext.buildSandbox.main": {
-			"dependencies": [],
+			"dependencies": [
+				"vue"
+			],
 			"messages": [
 				"buildsandbox-title"
 			],

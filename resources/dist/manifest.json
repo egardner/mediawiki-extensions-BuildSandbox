@@ -1,0 +1,7 @@
+{
+  "resources/src/main.js": {
+    "file": "ext.buildSandbox.main.js",
+    "src": "resources/src/main.js",
+    "isEntry": true
+  }
+}

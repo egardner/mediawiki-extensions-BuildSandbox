@@ -1,7 +1,10 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "grunt test"
+		"test": "grunt test",
+		"dev": "vite serve resources/src/",
+		"build": "vite build",
+		"serve": "vite preview"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.20.0",
@@ -9,7 +12,11 @@
 		"grunt-banana-checker": "0.9.0",
 		"grunt-eslint": "23.0.0",
 		"grunt-stylelint": "0.16.0",
-		"stylelint-config-wikimedia": "0.10.3"
+		"jquery": "^3.6.0",
+		"stylelint-config-wikimedia": "0.10.3",
+		"vite": "^2.2.3",
+		"vite-plugin-commonjs-externals": "^0.1.1",
+		"vue": "^2.6.12"
 	},
 	"eslintIgnore": [
 		"vendor/**"

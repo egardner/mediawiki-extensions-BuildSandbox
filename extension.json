@@ -42,13 +42,21 @@
 	},
 	"ResourceModules": {
 		"ext.buildSandbox.main": {
-			"dependencies": [],
 			"messages": [
 				"buildsandbox-title"
 			],
 			"styles": [],
 			"scripts": [
 				"dist/ext.buildSandbox.main.js"
+			]
+		},
+		"ext.buildSandbox.vue": {
+			"dependencies": [
+				"vue",
+				"wvui"
+			],
+			"scripts": [
+				"dist/ext.buildSandbox.vue.js"
 			]
 		}
 	},

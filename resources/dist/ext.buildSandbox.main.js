@@ -13,8 +13,6 @@
 	  return 'B';
 	}
 
-	var Vue = require('vue');
 	$__default['default']('#sandbox').html("\n\t<p>\n\t\tThis page contains data from ".concat(helloFromA(), " and ").concat(helloFromB(), ";\n\t</p>\n"));
-	console.log(Vue.version);
 
 }($));

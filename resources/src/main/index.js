@@ -7,19 +7,9 @@ import { helloFromA } from './moduleA';
 import { helloFromB } from './moduleB';
 import $ from 'jquery';
 
-// For dependencies managed by ResourceLoader, use "require", since
-// we need to call the module at runtime.
-// Finally, both jQuery and Vue should be designated as "external"
-// libraries in rollup.config.js because we want to ensure they are
-// not included in the final bundle. Both are still included as
-// devDependencies because we may need to load them for unit tests, etc.
-const Vue = require( 'vue' );
-
 // eslint-disable-next-line no-jquery/no-global-selector
 $( '#sandbox' ).html( `
 	<p>
 		This page contains data from ${helloFromA()} and ${helloFromB()};
 	</p>
 ` );
-
-console.log( Vue.version );

@@ -1,7 +1,8 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "grunt test"
+		"test": "grunt test",
+		"build": "webpack"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.20.0",
@@ -9,7 +10,10 @@
 		"grunt-banana-checker": "0.9.0",
 		"grunt-eslint": "23.0.0",
 		"grunt-stylelint": "0.16.0",
-		"stylelint-config-wikimedia": "0.10.3"
+		"jquery": "^3.6.0",
+		"stylelint-config-wikimedia": "0.10.3",
+		"webpack": "^5.36.2",
+		"webpack-cli": "^4.6.0"
 	},
 	"eslintIgnore": [
 		"vendor/**"

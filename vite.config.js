@@ -4,36 +4,42 @@
 // in editors like VSCode for useful typehints, etc.
 import { defineConfig } from 'vite';
 import commonjsExternals from 'vite-plugin-commonjs-externals';
+import vue2 from 'vite-plugin-vue2';
 
 export default defineConfig( {
+	root: 'resources/src',
+
+	plugins: [
+		vue2.createVuePlugin(),
+		{
+			// see https://vitejs.dev/guide/using-plugins.html#enforcing-plugin-ordering
+			...commonjsExternals( { externals: [ 'vue' ] } ),
+			apply: 'build'
+		}
+	],
+
 	build: {
+		outDir: '../dist',
+		assetsDir: '',
+		minify: false,
+		manifest: true,
+		target: 'es2015',
+		emptyOutDir: true,
+
 		rollupOptions: {
 			input: {
-				// Do this for each module you want to output;
-				// the output bundle will live at:
-				// resources/dist/ext.buildSandbox.[key].js
 				main: 'resources/src/main.js'
 			},
 
 			output: {
-				dir: 'resources/dist',
-				format: 'iife',
 				entryFileNames: 'ext.buildSandbox.[name].js',
-				globals: {
-					jquery: '$'
-				}
-			},
+				chunkFileNames: `ext.buildSandbox.[name].js`,
+				assetFileNames: `ext.buildSandbox.[name].[ext]`
+			}
 
-			external: [ 'jquery', 'vue' ]
-		},
-
-		manifest: true,
-		minify: false,
-		target: 'es2015'
-	},
-	plugins: [
-		commonjsExternals( {
-			externals: [ 'vue' ]
-		} )
-	]
+			// external: [
+			// 	'vue'
+			// ]
+		}
+	}
 } );

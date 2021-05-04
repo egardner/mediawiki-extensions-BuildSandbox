@@ -14,12 +14,8 @@
 		"MediaWiki\\Extension\\BuildSandbox\\": "includes/"
 	},
 	"config": {
-		"BuildSandboxEnableFoo": {
-			"description": "Enable the Foo feature.",
-			"value": true
-		},
-		"BuildSandboxVandalizeEachPage": {
-			"description": "Write 'BuildSandbox was here' on each page",
+		"BuildSandboxDevelopmentMode": {
+			"description": "Whether development mode is enabled for the extension",
 			"value": false
 		}
 	},
@@ -27,9 +23,6 @@
 		"BuildSandboxHooks": {
 			"class": "MediaWiki\\Extension\\BuildSandbox\\Hooks"
 		}
-	},
-	"Hooks": {
-		"BeforePageDisplay": "BuildSandboxHooks"
 	},
 	"MessagesDirs": {
 		"BuildSandbox": [
@@ -48,11 +41,10 @@
 			"messages": [
 				"buildsandbox-title"
 			],
-			"styles": [],
-			"scripts": [
-				"dist/ext.buildSandbox.main.js"
-			],
-			"es6": true
+			"styles": [ "dist/ext.buildSandbox.main.css" ],
+			"scripts": [ "dist/ext.buildSandbox.main.js" ],
+			"es6": true,
+			"esModule": true
 		}
 	},
 	"SpecialPages": {

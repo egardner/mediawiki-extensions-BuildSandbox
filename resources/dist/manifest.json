@@ -1,7 +1,16 @@
 {
-  "resources/src/main.js": {
+  "main.js": {
     "file": "ext.buildSandbox.main.js",
-    "src": "resources/src/main.js",
-    "isEntry": true
+    "src": "main.js",
+    "isEntry": true,
+    "imports": [
+      "_ext.buildSandbox.vendor.js"
+    ],
+    "css": [
+      "ext.buildSandbox.main.css"
+    ]
+  },
+  "_ext.buildSandbox.vendor.js": {
+    "file": "ext.buildSandbox.vendor.js"
   }
 }

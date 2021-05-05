@@ -8,6 +8,15 @@ import vue2 from 'vite-plugin-vue2';
 export default defineConfig( {
 	root: 'resources/src',
 	plugins: [
+		{
+			name: 'cors-header',
+			configureServer( server ) {
+				server.middlewares.use( ( req, res, next ) => {
+					res.setHeader( 'Access-Control-Allow-Origin', '*' );
+					next();
+				} );
+			}
+		},
 		vue2.createVuePlugin()
 	],
 	build: {

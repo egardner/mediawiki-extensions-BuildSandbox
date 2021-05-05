@@ -44,8 +44,7 @@
 			],
 			"styles": [ "dist/ext.buildSandbox.style.css" ],
 			"scripts": [ "dist/ext.buildSandbox.main.js" ],
-			"es6": true,
-			"esModule": true
+			"es6": true
 		}
 	},
 	"SpecialPages": {

@@ -16,7 +16,7 @@
 	"config": {
 		"BuildSandboxDevelopmentMode": {
 			"description": "Whether development mode is enabled for the extension",
-			"value": false
+			"value":  false
 		}
 	},
 	"HookHandlers": {
@@ -42,7 +42,9 @@
 				"buildsandbox-title"
 			],
 			"styles": [ "dist/ext.buildSandbox.style.css" ],
-			"scripts": [ "dist/ext.buildSandbox.main.js" ],
+			"packageFiles": [
+				"dist/ext.buildSandbox.main.js"
+			],
 			"es6": true
 		}
 	},

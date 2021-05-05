@@ -21,8 +21,8 @@ class SpecialBuildSandbox extends \SpecialPage {
 
 		if ( $config->get( 'BuildSandboxDevelopmentMode' ) ) {
 			// Vite dev mode with HMR support
-			$out->addHTML( '<script type="module" src="http://localhost:3000/@vite/client"></script>' );
-			$out->addHTML( '<script type="module" src="http://localhost:3000/main.js"></script>' );
+			$out->addHTML( '<script async type="module" src="http://localhost:3000/@vite/client"></script>' );
+			$out->addHTML( '<script async type="module" src="http://localhost:3000/main.js"></script>' );
 		} else {
 			$out->addModules( 'ext.buildSandbox.main' );
 		}

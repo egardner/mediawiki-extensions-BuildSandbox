@@ -19,7 +19,8 @@ export default defineConfig( {
 
 		lib: {
 			entry: 'main.js',
-			formats: [ 'cjs' ]
+			formats: [ 'cjs' ],
+			name: 'buildSandbox'
 		},
 
 		rollupOptions: {

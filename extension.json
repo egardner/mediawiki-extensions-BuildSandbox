@@ -16,7 +16,7 @@
 	"config": {
 		"BuildSandboxDevelopmentMode": {
 			"description": "Whether development mode is enabled for the extension",
-			"value":  true
+			"value":  false
 		}
 	},
 	"HookHandlers": {

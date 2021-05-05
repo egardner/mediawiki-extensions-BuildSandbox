@@ -36,8 +36,7 @@
 	"ResourceModules": {
 		"ext.buildSandbox.main": {
 			"dependencies": [
-				"vue",
-				"wvui"
+				"vue"
 			],
 			"messages": [
 				"buildsandbox-title"

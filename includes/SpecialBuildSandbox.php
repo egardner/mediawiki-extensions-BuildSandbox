@@ -1,6 +1,8 @@
 <?php
 
 namespace MediaWiki\Extension\BuildSandbox;
+use Html;
+use ResourceLoader;
 
 class SpecialBuildSandbox extends \SpecialPage {
 
@@ -22,7 +24,15 @@ class SpecialBuildSandbox extends \SpecialPage {
 		if ( $config->get( 'BuildSandboxDevelopmentMode' ) ) {
 			// Vite dev mode with HMR support
 			$out->addHTML( '<script type="module" src="http://localhost:3000/@vite/client"></script>' );
-			$out->addHTML( '<script type="module" src="http://localhost:3000/main.js"></script>' );
+			// Add <script type="module" src="http://localhost:3000/main.js">, but only after mediawiki.base loads
+			$out->addHTML( Html::element( 'script', [],
+				ResourceLoader::makeInlineCodeWithModule( 'mediawiki.base', <<<JAVASCRIPT
+					var script = document.createElement( 'script' );
+					script.src = 'http://localhost:3000/main.js';
+					script.type = 'module';
+					document.body.appendChild( script );
+JAVASCRIPT
+			) ) );
 		} else {
 			$out->addModules( 'ext.buildSandbox.main' );
 		}

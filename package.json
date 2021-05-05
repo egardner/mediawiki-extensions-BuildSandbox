@@ -1,5 +1,6 @@
 {
 	"private": true,
+	"name": "build-sandbox",
 	"scripts": {
 		"test": "grunt test",
 		"dev": "vite serve",
@@ -16,7 +17,6 @@
 		"jquery": "^3.6.0",
 		"stylelint-config-wikimedia": "0.10.3",
 		"vite": "^2.2.3",
-		"vite-plugin-commonjs-externals": "^0.1.1",
 		"vite-plugin-vue2": "^1.4.4",
 		"vue": "^2.6.12"
 	},

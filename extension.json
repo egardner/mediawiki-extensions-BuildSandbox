@@ -36,12 +36,13 @@
 	"ResourceModules": {
 		"ext.buildSandbox.main": {
 			"dependencies": [
-				"vue"
+				"vue",
+				"wvui"
 			],
 			"messages": [
 				"buildsandbox-title"
 			],
-			"styles": [ "dist/ext.buildSandbox.main.css" ],
+			"styles": [ "dist/ext.buildSandbox.style.css" ],
 			"scripts": [ "dist/ext.buildSandbox.main.js" ],
 			"es6": true,
 			"esModule": true

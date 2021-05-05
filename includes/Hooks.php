@@ -27,11 +27,6 @@ class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
 	 * @param \Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ) : void {
-		$config = $out->getConfig();
-		if ( $config->get( 'BuildSandboxVandalizeEachPage' ) ) {
-			$out->addHTML( \Html::element( 'p', [], 'BuildSandbox was here' ) );
-			$out->addModules( 'oojs-ui-core' );
-		}
 	}
 
 }

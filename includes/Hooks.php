@@ -37,17 +37,7 @@ class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
 	public static function devModeCallback( ResourceLoaderContext $context, Config $config, array $paths ) {
 		list( $buildPath, $devServerRoot, $devPath ) = $paths;
 		if ( $config->get( 'BuildSandboxDevelopmentMode' ) ) {
-			$addScriptFunction = <<<JAVASCRIPT
-				function addModuleScript( src ) {
-					var script = document.createElement( 'script' );
-					script.src = src;
-					script.type = 'module';
-					document.body.appendChild( script );
-				}
-JAVASCRIPT;
-			return $addScriptFunction .
-				Xml::encodeJsCall( 'addModuleScript', [ "$devServerRoot/@vite/client" ] ) .
-				Xml::encodeJsCall( 'addModuleScript', [ "$devServerRoot/$devPath" ] );
+			return [ 'moduleUrl' => "$devServerRoot/$devPath" ];
 		} else {
 			return new ResourceLoaderFilePath( $buildPath );
 		}

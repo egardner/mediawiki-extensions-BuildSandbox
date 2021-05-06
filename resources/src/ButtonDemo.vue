@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="buttonDemo">
 		<h2>WvuiButton.vue</h2>
 		<wvui-button @click="clicked++">
 			Default Button
@@ -34,3 +34,11 @@ export default {
 	}
 };
 </script>
+
+<style lang="less">
+.buttonDemo {
+	pre {
+		font-style: italic;
+	}
+}
+</style>

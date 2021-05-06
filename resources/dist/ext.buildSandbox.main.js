@@ -376,7 +376,7 @@ var render$2 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", [_c("h2", [_vm._v("WvuiButton.vue")]), _vm._v(" "), _c("wvui-button", {on: {click: function($event) {
+  return _c("div", {staticClass: "buttonDemo"}, [_c("h2", [_vm._v("WvuiButton.vue")]), _vm._v(" "), _c("wvui-button", {on: {click: function($event) {
     _vm.clicked++;
   }}}, [_vm._v("\n		Default Button\n	")]), _vm._v(" "), _c("wvui-button", {attrs: {action: "progressive"}, on: {click: function($event) {
     _vm.clicked++;
@@ -387,6 +387,7 @@ var render$2 = function() {
   }}}, [_vm._v("\n		Quiet button\n	")]), _vm._v(" "), _c("pre", [_vm._v("Clicked " + _vm._s(_vm.clicked) + " times.")])], 1);
 };
 var staticRenderFns$2 = [];
+var ButtonDemo_vue_vue_type_style_index_0_lang = ".buttonDemo pre {\n  font-style: italic;\n}\n";
 function normalizeComponent(scriptExports, render2, staticRenderFns2, functionalTemplate, injectStyles2, scopeId, moduleIdentifier, shadowMode) {
   var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
   if (render2) {

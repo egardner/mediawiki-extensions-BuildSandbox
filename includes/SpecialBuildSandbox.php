@@ -20,22 +20,7 @@ class SpecialBuildSandbox extends \SpecialPage {
 		$markup = "<div id='sandbox'><p>This message will dissappear once JS initializes</p></div>";
 		$out->setPageTitle( $this->msg( 'buildsandbox-title' ) );
 		$out->addHTML( $markup );
-
-		if ( $config->get( 'BuildSandboxDevelopmentMode' ) ) {
-			// Vite dev mode with HMR support
-			$out->addHTML( '<script type="module" src="http://localhost:3000/@vite/client"></script>' );
-			// Add <script type="module" src="http://localhost:3000/main.js">, but only after mediawiki.base loads
-			$out->addHTML( Html::element( 'script', [],
-				ResourceLoader::makeInlineCodeWithModule( 'mediawiki.base', <<<JAVASCRIPT
-					var script = document.createElement( 'script' );
-					script.src = 'http://localhost:3000/main.js';
-					script.type = 'module';
-					document.body.appendChild( script );
-JAVASCRIPT
-			) ) );
-		} else {
-			$out->addModules( 'ext.buildSandbox.main' );
-		}
+		$out->addModules( 'ext.buildSandbox.main' );
 	}
 
 	/**

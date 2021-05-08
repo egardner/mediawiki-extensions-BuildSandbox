@@ -1,5 +1,6 @@
 <template>
 	<div id="demo">
+		<p>You are using this demo in {{ config.mode }} mode.</p>
 		<button-demo></button-demo>
 		<typeahead-demo></typeahead-demo>
 	</div>
@@ -13,6 +14,12 @@ export default {
 	components: {
 		ButtonDemo,
 		TypeaheadDemo
+	},
+	props: {
+		config: {
+			type: Object,
+			default: () => {}
+		}
 	}
 };
 </script>

@@ -43,6 +43,7 @@
 			],
 			"styles": [ "dist/ext.buildSandbox.style.css" ],
 			"packageFiles": [
+				"src/mw-wrapper.js",
 				{
 					"name": "dist/ext.buildSandbox.main.js",
 					"callback": "MediaWiki\\Extension\\BuildSandbox\\Hooks::devModeCallback",
@@ -51,6 +52,10 @@
 						"http://localhost:3000",
 						"main.js"
 					]
+				},
+				{
+					"name": "src/config.json",
+					"config": [ "BuildSandboxDevelopmentMode" ]
 				}
 			],
 			"es6": true

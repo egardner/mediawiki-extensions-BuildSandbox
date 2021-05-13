@@ -1,8 +1,6 @@
 <?php
 
 namespace MediaWiki\Extension\BuildSandbox;
-use Html;
-use ResourceLoader;
 
 class SpecialBuildSandbox extends \SpecialPage {
 
@@ -16,7 +14,6 @@ class SpecialBuildSandbox extends \SpecialPage {
 	 */
 	public function execute( $sub ) {
 		$out = $this->getOutput();
-		$config = $out->getConfig();
 		$markup = "<div id='sandbox'><p>This message will dissappear once JS initializes</p></div>";
 		$out->setPageTitle( $this->msg( 'buildsandbox-title' ) );
 		$out->addHTML( $markup );

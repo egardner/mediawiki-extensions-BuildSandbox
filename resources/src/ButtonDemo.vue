@@ -5,15 +5,15 @@
 			Default Button
 		</wvui-button>
 
-		<wvui-button :action="'progressive'" @click="clicked++">
+		<wvui-button action="progressive" @click="clicked++">
 			Progressive button
 		</wvui-button>
 
-		<wvui-button :action="'destructive'" @click="clicked--">
+		<wvui-button action="destructive" @click="clicked--">
 			Destructive button
 		</wvui-button>
 
-		<wvui-button :quiet="true" @click="clicked++">
+		<wvui-button type="quiet" @click="clicked++">
 			Quiet button
 		</wvui-button>
 

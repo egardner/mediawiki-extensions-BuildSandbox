@@ -8,7 +8,7 @@
 		"serve": "vite preview"
 	},
 	"devDependencies": {
-		"@wikimedia/wvui": "^0.1.1",
+		"@wikimedia/wvui": "^0.2.0",
 		"eslint-config-wikimedia": "0.20.0",
 		"grunt": "1.3.0",
 		"grunt-banana-checker": "0.9.0",

@@ -19,6 +19,11 @@
 
 namespace MediaWiki\Extension\BuildSandbox;
 
+use Config;
+use ResourceLoaderContext;
+use ResourceLoaderFilePath;
+use Xml;
+
 class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
 
 	/**
@@ -27,10 +32,14 @@ class Hooks implements \MediaWiki\Hook\BeforePageDisplayHook {
 	 * @param \Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ) : void {
-		$config = $out->getConfig();
-		if ( $config->get( 'BuildSandboxVandalizeEachPage' ) ) {
-			$out->addHTML( \Html::element( 'p', [], 'BuildSandbox was here' ) );
-			$out->addModules( 'oojs-ui-core' );
+	}
+
+	public static function devModeCallback( ResourceLoaderContext $context, Config $config, array $paths ) {
+		list( $buildPath, $devServerRoot, $devPath ) = $paths;
+		if ( $config->get( 'BuildSandboxDevelopmentMode' ) ) {
+			return [ 'moduleUrl' => "$devServerRoot/$devPath" ];
+		} else {
+			return new ResourceLoaderFilePath( $buildPath );
 		}
 	}
 
